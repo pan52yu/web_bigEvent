@@ -49,3 +49,7 @@ $('#btnLogout').on('click', () => {
   });
 });
 getUserInfo();
+
+function changConst() {
+  $('#changConst').addClass('layui-this').siblings().removeClass();
+}

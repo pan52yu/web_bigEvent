@@ -92,12 +92,10 @@ $(function () {
       contentType: false,
       processData: false,
       success: function (res) {
-        if (res.status !== 0) {
-          return layer.msg('发布文章失败！');
-        }
-        layer.msg('发布文章成功！');
+        if (res.status !== 0) return layer.msg('发布文章失败！');
         // 发布文章成功后，跳转到文章列表页面
-        // location.href = '/article/art_list.html';
+        location.href = '/article/art_list.html';
+        window.parent.changConst();
       },
     });
   }
